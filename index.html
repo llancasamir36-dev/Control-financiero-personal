@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b1220">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Financiero Personal</title>
@@ -3767,5 +3769,13 @@
         window.showFinancialEducation = showFinancialEducation;
         window.showMealPlanning = showMealPlanning;
     </script>
+    <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js");
+    });
+  }
+</script>
 </body>
+
 </html>
